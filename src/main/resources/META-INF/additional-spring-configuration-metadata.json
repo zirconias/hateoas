@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "constraint.quantity.item.name",
+      "type": "java.lang.String",
+      "description": "element in fridge"
+    },
+    {
+      "name": "constraint.quantity.item.maximum",
+      "type": "java.lang.String",
+      "description": "quantity allowed for  item in fridge"
+    }
+  ]
+}
