@@ -1,4 +1,4 @@
-package dz.imdrissi.labs.hateoas.util;
+package dz.imdrissi.labs.hateoas.entity.item;
 
 import dz.imdrissi.labs.hateoas.controller.ItemController;
 import dz.imdrissi.labs.hateoas.entity.item.Item;
