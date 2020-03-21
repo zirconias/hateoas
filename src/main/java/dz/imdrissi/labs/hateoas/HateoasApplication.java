@@ -1,7 +1,7 @@
 package dz.imdrissi.labs.hateoas;
 
 import dz.imdrissi.labs.hateoas.entity.Fridge;
-import dz.imdrissi.labs.hateoas.entity.Item;
+import dz.imdrissi.labs.hateoas.entity.item.Item;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,13 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.hateoas.config.EnableHypermediaSupport;
 
 import java.util.Arrays;
 
 @Slf4j
 @EnableJpaRepositories
+@EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
 @SpringBootApplication
 public class HateoasApplication {
 

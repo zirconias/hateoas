@@ -1,7 +1,7 @@
 package dz.imdrissi.labs.hateoas.repository;
 
-import dz.imdrissi.labs.hateoas.entity.Item;
-import dz.imdrissi.labs.hateoas.entity.ItemProjection;
+import dz.imdrissi.labs.hateoas.entity.item.Item;
+import dz.imdrissi.labs.hateoas.entity.item.ItemProjection;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;

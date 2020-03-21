@@ -1,4 +1,4 @@
-package dz.imdrissi.labs.hateoas.entity;
+package dz.imdrissi.labs.hateoas.entity.item;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

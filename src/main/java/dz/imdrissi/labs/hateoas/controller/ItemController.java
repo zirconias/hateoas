@@ -1,8 +1,6 @@
 package dz.imdrissi.labs.hateoas.controller;
 
-import dz.imdrissi.labs.hateoas.entity.Item;
-import dz.imdrissi.labs.hateoas.entity.ItemNotFoundException;
-import dz.imdrissi.labs.hateoas.entity.ItemProjection;
+import dz.imdrissi.labs.hateoas.entity.item.*;
 import dz.imdrissi.labs.hateoas.repository.ItemRepository;
 import dz.imdrissi.labs.hateoas.util.ItemModelAssembler;
 import org.springframework.data.domain.Page;
@@ -51,6 +49,24 @@ public class ItemController {
             items = new ArrayList<EntityModel<ItemProjection>>();
         }
         return new CollectionModel<EntityModel<ItemProjection>>(items, linkTo(methodOn(ItemController.class).all(pageNum, pageSize)).withSelfRel());
+    }
+
+    @GetMapping("/itemsz")
+    public CollectionModel<ItemModel> allz(@RequestParam(defaultValue = "0") Integer pageNum, @RequestParam(defaultValue = "10") Integer pageSize) {
+        Pageable paging = PageRequest.of(pageNum, pageSize, Sort.by("id"));
+        Page<ItemProjection> pagedResult = itemRepository.findAllBasicData(paging);
+        List<EntityModel<ItemProjection>> items;
+
+        if (pagedResult.hasContent()) {
+            items = pagedResult.getContent().stream()
+                    .map(itemAssembler::toModel)
+                    .collect(Collectors.toList());
+        } else {
+            items = new ArrayList<EntityModel<ItemProjection>>();
+        }
+        ItemAssembler iass = new ItemAssembler();
+        CollectionModel<ItemModel> collection = iass.toCollectionModel(itemRepository.findAll());
+        return collection;
     }
 
 

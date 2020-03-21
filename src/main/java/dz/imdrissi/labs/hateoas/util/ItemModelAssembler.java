@@ -1,8 +1,8 @@
 package dz.imdrissi.labs.hateoas.util;
 
 import dz.imdrissi.labs.hateoas.controller.ItemController;
-import dz.imdrissi.labs.hateoas.entity.Item;
-import dz.imdrissi.labs.hateoas.entity.ItemProjection;
+import dz.imdrissi.labs.hateoas.entity.item.Item;
+import dz.imdrissi.labs.hateoas.entity.item.ItemProjection;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;

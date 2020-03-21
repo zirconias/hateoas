@@ -1,7 +1,7 @@
 package dz.imdrissi.labs.hateoas.entity.validator;
 
 import dz.imdrissi.labs.hateoas.entity.Fridge;
-import dz.imdrissi.labs.hateoas.entity.Item;
+import dz.imdrissi.labs.hateoas.entity.item.Item;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
