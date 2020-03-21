@@ -1,7 +1,7 @@
-package dz.imdrissi.labs.hateoas.entity.item;
+package dz.imdrissi.labs.hateoas.rest.item;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import dz.imdrissi.labs.hateoas.entity.Fridge;
+import dz.imdrissi.labs.hateoas.rest.fridge.Fridge;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.rest.core.annotation.Description;

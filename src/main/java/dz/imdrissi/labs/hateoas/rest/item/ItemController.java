@@ -1,8 +1,6 @@
-package dz.imdrissi.labs.hateoas.controller;
+package dz.imdrissi.labs.hateoas.rest.item;
 
-import dz.imdrissi.labs.hateoas.entity.item.*;
 import dz.imdrissi.labs.hateoas.repository.ItemRepository;
-import dz.imdrissi.labs.hateoas.entity.item.ItemModelAssembler;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

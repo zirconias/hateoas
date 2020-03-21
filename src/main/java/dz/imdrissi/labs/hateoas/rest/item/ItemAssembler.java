@@ -1,4 +1,4 @@
-package dz.imdrissi.labs.hateoas.entity.item;
+package dz.imdrissi.labs.hateoas.rest.item;
 
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
