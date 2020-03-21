@@ -1,5 +1,6 @@
 package dz.imdrissi.labs.hateoas.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.rest.core.annotation.Description;
@@ -34,6 +35,7 @@ public class Item {
     @Column(nullable = false)
     String name;
 
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name = "fridge_id")
     private Fridge fridge;

@@ -1,6 +1,10 @@
 package dz.imdrissi.labs.hateoas.repository;
 
 import dz.imdrissi.labs.hateoas.entity.Item;
+import dz.imdrissi.labs.hateoas.entity.ItemProjection;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.Description;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -18,4 +22,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 //        ,excerptProjection =
 )
 public interface ItemRepository extends PagingAndSortingRepository<Item, Long> {
+
+    @Query(value = "select id, name from item", nativeQuery = true)
+    Page<ItemProjection> findAllBasicData(Pageable pageable);
 }

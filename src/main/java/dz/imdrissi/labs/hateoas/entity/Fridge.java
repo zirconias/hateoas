@@ -1,6 +1,7 @@
 package dz.imdrissi.labs.hateoas.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.rest.core.annotation.Description;
@@ -36,6 +37,7 @@ public class Fridge {
     @Column(nullable = false, unique = true)
     String name;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "fridge", cascade = {CascadeType.ALL})
     @ToString.Exclude
     List<Item> items;
